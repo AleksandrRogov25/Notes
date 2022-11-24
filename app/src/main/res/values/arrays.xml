@@ -14,5 +14,12 @@
         <item>Содержание заметки 4</item>
         <item>Содержание заметки 5</item>
     </string-array>
+    <string-array name="date">
+        <item>01.11.2022</item>
+        <item>02.11.2022</item>
+        <item>03.11.2022</item>
+        <item>04.11.2022</item>
+        <item>05.11.2022</item>
+    </string-array>
 
 </resources>

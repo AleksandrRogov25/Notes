@@ -1,5 +1,6 @@
 package com.example.notes;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class NotesDetailFragment extends Fragment {
@@ -32,22 +34,27 @@ public class NotesDetailFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         Bundle arguments = getArguments();
         if (arguments != null) {
-            int index = arguments.getInt(ARG_INDEX);
+            Notes notes = arguments.getParcelable(ARG_INDEX);
             TextView tvNote = view.findViewById(R.id.textNote);
-            String[] note = getResources().getStringArray(R.array.notes);
-            tvNote.setText(note[index]);
+            tvNote.setText(notes.getName());
             tvNote.setTextSize(28);
             TextView tvNoteDesc = view.findViewById(R.id.textDescription);
-            String[] note_description = getResources().getStringArray(R.array.notes_detail);
-            tvNoteDesc.setText(note_description[index]);
+            tvNoteDesc.setText(notes.getDescription());
             tvNoteDesc.setTextSize(24);
+            TextView tvDate = view.findViewById(R.id.textDate);
+            tvDate.setText(notes.getDate());
+            tvDate.setTextSize(24);
+        }
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+            Button btnBack = view.findViewById(R.id.btn_back);
+            btnBack.setOnClickListener(view1 -> requireActivity().getSupportFragmentManager().popBackStack());
         }
     }
 
-    public static NotesDetailFragment newInstance(int index) {
+    public static NotesDetailFragment newInstance(Notes notes) {
         NotesDetailFragment fragment = new NotesDetailFragment();
         Bundle args = new Bundle();
-        args.putInt(ARG_INDEX, index);
+        args.putParcelable(ARG_INDEX, notes);
         fragment.setArguments(args);
         return fragment;
     }
