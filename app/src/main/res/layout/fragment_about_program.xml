@@ -9,10 +9,12 @@
     android:focusable="true">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/about_program"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        android:layout_gravity="center"
+        android:text="@string/about_program"
+        android:textSize="@dimen/text_about_program" />
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -23,6 +25,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:text="@string/btn_back"
-            android:textSize="@dimen/text_size" />
+            android:textSize="@dimen/btn_back" />
     </FrameLayout>
 </LinearLayout>

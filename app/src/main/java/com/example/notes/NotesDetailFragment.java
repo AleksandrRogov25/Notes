@@ -8,10 +8,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
+
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+
 
 public class NotesDetailFragment extends Fragment {
     static private final String ARG_INDEX = "index";
@@ -26,6 +28,7 @@ public class NotesDetailFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         return inflater.inflate(R.layout.fragment_notes_detail, container, false);
     }
 
@@ -51,6 +54,7 @@ public class NotesDetailFragment extends Fragment {
         }
     }
 
+
     public static NotesDetailFragment newInstance(Notes notes) {
         NotesDetailFragment fragment = new NotesDetailFragment();
         Bundle args = new Bundle();
@@ -58,4 +62,5 @@ public class NotesDetailFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
+
 }

@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -18,7 +18,7 @@ import androidx.fragment.app.FragmentTransaction;
 public class NotesFragment extends Fragment {
     private static final String CURRENT_NOTE = "CurrentNote";
     private Notes currentPosition;
-    private static final String ARG_1 = "Arg_1";
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,18 +43,7 @@ public class NotesFragment extends Fragment {
         if (isLandscape()) {
             showLandNotesDetail(currentPosition);
         }
-        if (isPortrait()) {
-            Button btnBack = view.findViewById(R.id.about_program);
-            btnBack.setOnClickListener(view1 -> {
-                AboutProgramFragment aboutProgram = AboutProgramFragment.newInstance(ARG_1);
-                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.add(R.id.fragment_container, aboutProgram);
-                fragmentTransaction.addToBackStack("");
-                fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                fragmentTransaction.commit();
-            });
-        }
+
     }
 
 
@@ -116,8 +105,5 @@ public class NotesFragment extends Fragment {
                 == Configuration.ORIENTATION_LANDSCAPE;
     }
 
-    private boolean isPortrait() {
-        return getResources().getConfiguration().orientation
-                == Configuration.ORIENTATION_PORTRAIT;
-    }
+
 }

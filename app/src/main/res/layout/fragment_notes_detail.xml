@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:text="@string/btn_back"
-        android:textSize="@dimen/text_size" />
+        android:textSize="@dimen/btn_back" />
     </FrameLayout>
 
 </LinearLayout>

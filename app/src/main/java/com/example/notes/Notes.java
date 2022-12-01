@@ -4,10 +4,21 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Notes implements Parcelable {
-    private final String name;
-    private final String description;
-    private final String date;
+    private  String name;
+    private  String description;
+    private  String date;
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 
     public String getName() {
         return name;

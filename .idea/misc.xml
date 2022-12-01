@@ -3,13 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/GeekBrains/Notes/app/src/main/res/layout-land/activity_main.xml" value="0.2625" />
+        <entry key="..\:/GeekBrains/Notes/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.124" />
+        <entry key="..\:/GeekBrains/Notes/app/src/main/res/layout-land/activity_main.xml" value="0.16" />
         <entry key="..\:/GeekBrains/Notes/app/src/main/res/layout-land/fragment_notes.xml" value="0.1" />
         <entry key="..\:/GeekBrains/Notes/app/src/main/res/layout-land/fragment_notes_detail.xml" value="0.1" />
-        <entry key="..\:/GeekBrains/Notes/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
+        <entry key="..\:/GeekBrains/Notes/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/GeekBrains/Notes/app/src/main/res/layout/drawer_header.xml" value="0.24010416666666667" />
         <entry key="..\:/GeekBrains/Notes/app/src/main/res/layout/fragment_about_program.xml" value="0.1" />
         <entry key="..\:/GeekBrains/Notes/app/src/main/res/layout/fragment_notes.xml" value="0.16" />
         <entry key="..\:/GeekBrains/Notes/app/src/main/res/layout/fragment_notes_detail.xml" value="0.1" />
+        <entry key="..\:/GeekBrains/Notes/app/src/main/res/menu/menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/GeekBrains/Notes/app/src/main/res/menu/menu_drawer.xml" value="0.25416666666666665" />
+        <entry key="..\:/GeekBrains/Notes/app/src/main/res/menu/menu_notes_detail.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
