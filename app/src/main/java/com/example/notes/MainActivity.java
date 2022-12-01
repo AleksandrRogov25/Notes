@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Menu;
@@ -98,13 +100,27 @@ public class MainActivity extends AppCompatActivity {
 
                         Toast.makeText(getApplicationContext(), "Изменить заметку", Toast.LENGTH_SHORT).show();
                         return true;
-                    case R.id.action_exit:
-                        finish();
-                        return true;
 
+
+
+                    case R.id.action_exit:
+                        new AlertDialog.Builder(this)
+                                .setTitle("Диалоговое окно")
+                                .setMessage("Вы уверены что хотите закрыть приложение?")
+                                .setPositiveButton("Да", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        finish();
+                                    }
+                                })
+                                .setNegativeButton("Нет", null)
+                                .show();
+                        return true;
                     }
-                return super.onOptionsItemSelected(item);
-            }
+                    return super.onOptionsItemSelected(item);
+                }
+
+   
     private boolean isLandscape() {
         return getResources().getConfiguration().orientation
                 == Configuration.ORIENTATION_LANDSCAPE;
